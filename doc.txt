@@ -1,0 +1,40 @@
+Terrafrom webste:
+https://developer.hashicorp.com/terraform
+
+
+
+II - Installation on my ubuntu wsl2:
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+wget -O- https://apt.releases.hashicorp.com/gpg |  gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+echo gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
+sudo apt update
+sudo apt-get install terraform
+terraform --version
+
+
+
+export AWS_ACCESS_KEY_ID="your_access_key_id"
+export AWS_SECRET_ACCESS_KEY="your_secret_access_key"
+export AWS_DEFAULT_REGION="*****"
+
+
+AWS CLI installation reminder:
+sudo apt update
+sudo apt install awscli
+aws --version
+
+aws configure
+ aws configure
+AWS Access Key ID [****************CLHM]: A*******************V
+AWS Secret Access Key [****************evgk]: l9b******************L2c
+Default region name [eu-west-3]: eu-west-3
+Default output format [json]: json
+
+main.tf
+variables.tf
+terraform init
+terraform validate
+terraform plan
+terraform apply
+terraform apply -auto-approve
+
